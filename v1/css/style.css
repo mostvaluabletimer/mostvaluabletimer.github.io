@@ -1,0 +1,547 @@
+body{
+		margin: 0;
+		padding: 0;
+    font-family: sans-serif;
+		overflow-x: hidden;
+	}
+
+header{
+  margin: 0;
+  /* padding: .63rem 0 0 3vw; */
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  /* height: 8.5vh; */
+	display: flex;
+	justify-content: space-between;
+  }
+
+	header div{
+		margin-left: 2.5vw;
+	}
+
+footer{
+	background-color: #555;
+	padding: 1rem .6rem 1rem 2.5vw;
+	margin: 2.7rem 0 0 0;
+	clear: both;
+	font-size: 1rem;
+  }
+
+button{
+	cursor: pointer;
+	font-size: .85rem;
+}
+
+a{
+	cursor: pointer;
+}
+
+.container{
+	width: 80%;
+	margin: auto;
+}
+
+.header1{
+  float: left;
+	margin-top: .5rem;
+}
+
+.headerTab{
+  float: right;
+  /* margin-right: 16vw; */
+	position: absolute;
+	bottom: 0;
+	right: 3vw;
+}
+
+header h1{
+  color: #e2e2e2;
+  margin: 0;
+  }
+
+header h3{
+	margin-top: -.6rem;
+}
+
+header ul{
+	/* position: absolute;
+	bottom: 0; */
+	display: inline-flex;
+}
+
+header ul, .searchSec ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+.searchSec ul{
+	display: flex;
+	flex-direction: column;
+}
+
+header li
+/* , .searchSec li */
+{
+	margin: 0 .6rem 0 0;
+	padding: .5rem .6rem .2rem;
+}
+.greenBack{
+	background-color: #38c4a3;
+}
+
+.grayBack{
+	background-color: #555;
+}
+
+.purpleBack{
+	background-color: #b138c4;
+}
+
+.whiteTxt{
+	color: #fff;
+}
+
+.pinkTxt, .mvpDelete, .instDelete{
+  color: #eb5062;
+}
+
+.greenTxt, .mvpRefresh, .instRefresh{
+  color: #38c4a3;
+}
+
+.tab{
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+  cursor: pointer;
+  transition: .5s;
+}
+
+ .tab:hover{
+  background-color:#7d7d7d;
+  transition: .5s;
+}
+
+#instBox{
+	display: none;
+}
+
+.actvTab, .actvTab:hover{
+	background-color: #b138c4;
+}
+
+#cortina{
+	float: left;
+	position: fixed;
+	height: 100vh;
+	width: 1vw;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	transition: .5s;
+	overflow: hidden;
+}
+
+#cortinaBtn{
+	position: fixed;
+	top: 50vh;
+	left: .5vw;
+	width: 1rem;
+	height: 2rem;
+	z-index: 4;
+	transition: .5s;
+  cursor: pointer;
+  padding: .4rem .2rem;
+  border-top-right-radius: 1.6rem;
+  border-bottom-right-radius: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#displaySec{
+	margin-left: 3vw;
+	margin-top: 13vh;
+	margin-bottom: 3.25rem;
+	width: 97%;
+	min-height: 75.6vh;
+}
+
+.item p{
+	padding: 0;
+	margin: 0;
+}
+
+#displaySec h3.name, .searchSec h3.name{
+	margin: .4rem 0;
+	padding: 0;
+	font-size: .8rem;
+	width: 60%;
+}
+
+.adSenseEx{
+	display: flex;
+  justify-content: center;
+  margin: 0 10rem 4vh 10rem;
+  padding: 2rem 0;
+  background-color: orange;
+}
+
+.adSenseEx_{
+    margin: auto;
+    width: 80%;
+    padding: 2rem 0;
+    background-color: orange;
+    position: absolute;
+    right: 15%;
+    top: 83.5vh;
+    text-align: center;
+}
+
+.item{
+	border: .05rem solid #e2e2e2;
+	border-radius: .6rem;
+	text-align: center;
+	position: relative;
+	padding: 0;
+  width: 12rem;
+  float: left;
+	background-color: #fff;
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.box{
+  transition: .5s;
+  margin: 0 .5rem .5rem 0;
+}
+
+
+.fontSize7,
+.mapId, .servidor, .description, .mvpDelete, .instDelete, .mvpRefresh, .instRefresh{
+	font-size: .7rem;
+}
+
+
+.mvpDelete, .instDelete{
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  cursor: pointer;
+}
+
+.mvpRefresh, .instRefresh{
+  position: absolute;
+	bottom: .5rem;
+	left: .5rem;
+  cursor: pointer;
+}
+
+.intervalo{
+	position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+
+.searchSec{
+	position: absolute;
+	top: 1.1rem;
+	left: 0;
+	margin: .4rem 2.5vw;
+	width: 100%;
+}
+
+button.searchTab{
+  border: none;
+	outline: none;
+  border-bottom: .05rem solid #fff;
+  width: 80rem;
+  text-align: left;
+  padding: .6rem;
+	transition: .5s;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-weight: bold;
+}
+
+
+button.searchTab::before{
+	content: '\002B'; /* Unicode character for "plus" sign (+) */
+  font-size: 1.1rem;
+	padding: 0 .4rem;
+}
+
+button.activeBtn::before {
+  content: '\2212'; /* Unicode character for "minus" sign (-) */
+}
+
+.activeBtn, .searchSec button:hover, button.addInfo:hover {
+  background-color: #2da185;
+	transition: .5s;
+}
+
+.panel{
+	padding: 0 1rem;
+    background-color: white;
+    max-height: 0;
+    width: 78rem;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.searchSec input[type=text]{
+	padding: .4rem;
+  margin: .5rem 0;
+  width: 77rem;
+}
+
+button.addMvpCardBtn, button.addInstCardBtn {
+	border: none;
+	margin: .5rem 0;
+	padding: .4rem .5rem;
+	border-radius: 2rem;
+	transition: .5s;
+}
+
+.searchBox{
+	overflow-y: scroll;
+	max-height: 25rem;
+}
+
+.animate{
+	opacity: 0;
+	font-size: 0;
+	width: 0;
+	margin-left: -.6rem;
+	transition: .5s;
+}
+
+.item img{
+	max-height: 6em;
+}
+
+#cardAdd, #tutorial, #donating{
+	background: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+#cardAdd{
+	display: flex;
+}
+
+#tutorial, #donating{
+	display: none;
+}
+
+#cardAdd div.item{
+	width: 20rem;
+	padding: 1rem;
+	height: 17.5rem;
+}
+
+#donating div.item{
+	width: 40rem;
+	padding: 1rem;
+	height: 35rem;
+}
+
+#donating p{
+	margin-bottom: 1rem;
+}
+
+#cardAdd h3{
+	font-size: .9rem;
+	margin: 0;
+	padding: 0;
+}
+
+.inputs{
+	width: 100%;
+}
+
+.inputs input, .inputs select{
+	padding: .4rem;
+}
+
+.inputs p {
+  font-size: .8rem;
+  padding: .4rem;
+  margin-top: .4rem;
+}
+
+input#deathDesc {
+    width: 80%;
+    text-align: center;
+}
+
+.addInfo{
+	border: none;
+  padding: .4rem .5rem;
+  border-radius: 2rem;
+	margin-top: .6rem;
+	transition: .5s;
+}
+
+span.charRem {
+    color: red;
+    font-size: .6rem;
+    display: inherit;
+		margin-top: .2rem;
+}
+
+span#closeInfo, span#closeDon {
+    position: absolute;
+    top: .4rem;
+    right: .6rem;
+    cursor: pointer;
+}
+
+footer span{
+	height: 1.3rem;
+}
+
+.right{
+	float: right;
+	display: flex;
+	align-items: center;
+}
+
+.right small{
+	cursor: pointer;
+}
+
+.right:hover small{
+	text-decoration: underline;
+}
+
+#tutorial div.item{
+	width: 90vw;
+	height: 90vh;
+	position: relative;
+}
+
+.closeTut{
+	text-decoration: none;
+	color: #fff;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.closeTut:hover{
+	text-decoration: underline;
+}
+
+.checkT{
+	position: absolute;
+	bottom: 2vh;
+	left: 2vw;
+}
+
+.fontSize70 {
+    font-size: 3rem;
+    text-align: center;
+}
+/* media queries */
+@media only screen and (max-width: 480px) {
+	body{
+		font-size: 16px!important;
+	}
+}
+@media only screen and (min-width:481px) and (max-width: 809px) {
+	body{
+		font-size: 16px!important;
+	}
+}
+@media only screen and (max-width: 812px) {
+	body{
+		font-size: 24px;
+	}
+	header{
+		position: relative;
+	}
+	footer{
+		height: 4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		padding-bottom: 3rem;
+		font-size: 1.4rem;
+	}
+	.right{
+		flex-direction: column;
+	}
+	#displaySec{
+		margin-top: 2rem;
+		margin-left: 3.5vw;
+	}
+	#cortinaBtn{
+		padding: 2rem .4rem;
+	}
+
+	.panel div.item, #displaySec div.item{
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 97%;
+	}
+	#cardAdd div.item{
+		width: 80%;
+		height: 25%;
+	}
+	.fontSize7, .mapId, .servidor, .description, button.addMvpCardBtn, button.addInstCardBtn,
+	#addInfo, .inputs p, .inputs input, .inputs select {
+    font-size: 1rem;
+	}
+
+	.mvpDelete, .instDelete, .mvpRefresh, .instRefresh, #b0, #b1{
+		font-size: 1.5rem;
+	}
+	#displaySec h3.name, .searchSec h3.name {
+    font-size: 1.1rem;
+		width: 17%;
+	}
+
+	.timer, small{
+		font-size: 1.2rem;
+	}
+	button.searchTab{
+		width: 90vw;
+	}
+	.panel{
+		width: 86vw;
+	}
+	.searchSec input[type=text] {
+		width: 82vw;
+	}
+	#openDon{
+		text-decoration: underline;
+	}
+	#cardAdd h3 {
+		font-size: 1.2rem;
+	}
+	span.charRem{
+		font-size: .75rem;
+	}
+	.searchBox{
+		max-height: 12.5rem;
+	}
+
+}
+@media only screen and (max-width: 1024px) {}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+  </head>
+  <body>
+    <div id="donating">
+      <div class="item">
+        <h3>Apoie doando</h3>
+        <img src="./img/rops.png" alt="">
+        <p>ROPS • cutegld@gmail.com (login e email)</p>
+        <img src="./img/picpay.png" alt="">
+        <p>PICPAY • @johngvc</p>
+        <img src="./img/paypal.png" alt="">
+        <p>PAYPAL • johngvc@gmail.com</p>
+        <span id="closeDon"><i class="fa fa-times"></i></span>
+      </div>
+    </div>
+    <header class="grayBack">
+      <div class="container">
+        <div class="header1">
+          <a><h1>MVTimer</h1>
+          <h3>most valuable timer</h3>
+        </div>
+        <div class="headerTab" id="headerTab">
+          <ul>
+            <li class="tab greenBack whiteTxt actvTab"  onclick="toggleActvTab(this,'mvpBox')">
+              MVP's
+            </li>
+            <li class="tab greenBack whiteTxt" onclick="toggleActvTab(this,'instBox')">
+              Instâncias
+            </li>
+            <li class="tab greenBack whiteTxt" onclick="toggleActvTab(this,'tutBox')">
+              Tutorial
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- <div id="cortina" class="greenBack">
+      <div class="searchSec">
+        <button class="searchTab whiteTxt greenBack" id="b0">MVP's</button>
+        <div class="panel" id="p0">
+          <input type="text" id="mvpSearchBar" onkeyup="lookUp()" placeholder="Pesquisar" title="Procure um MVP">
+          <div id="mvpSearch" class="searchBox">
+          </div>
+        </div>
+
+        <button class="searchTab whiteTxt greenBack" id="b1">Instâncias</button>
+        <div class="panel" id="p1">
+          <input type="text" id="instSearchBar" onkeyup="lookUp0()" placeholder="Pesquisar" title="Procure uma instância">
+          <div id="instSearch" class="searchBox">
+          </div>
+        </div>
+        <div class="adSenseEx_">AQUI VAI O AD</div>
+      </div>
+
+      <div id="cortinaBtn" class="greenBack whiteTxt">
+        <i class='fas fa-chevron-right'></i>
+      </div>
+    </div> -->
+    <div class="container">
+      <div id="displaySec" class="displaySec">
+          <div class="adSenseEx">AQUI VAI O AD</div>
+          <div class="tabcontent" id="mvpBox"></div>
+          <div class="tabcontent" id="instBox"></div>
+          <div class="tabcontent" id="tutBox"></div>
+      </div>
+    </div>
+
+    <footer class="whiteTxt">
+      <span class="left"><small>&copy; Mage Bgt • John Gvc • 2019 • Ragnarok Online images are owned by Gravity Corp.</small></span>
+      <span class="right" >
+        <small id="openDon">Apoie doando</small>
+      </span>
+    </footer>
+
+    <audio id="mvpJingle">
+    	<source src="audio/mvp.mp3"></source>
+    	<source src="audio/mvp.ogg"></source>
+    	Your browser doesn't support audio.
+    </audio>
+
+
+    <script src="populateAdd.js" charset="utf-8"></script>
+    <script src="populateAdd2.js" charset="utf-8"></script>
+    <script src="data.js" charset="utf-8"></script>
+    <script src="data2.js" charset="utf-8"></script>
+    <script src="panel.js" charset="utf-8"></script>
+    <script src="tab.js" charset="utf-8"></script>
+    <script src="info.js" charset="utf-8"></script>
+    <script src="addndelete.js" charset="utf-8"></script>
+    <script src="addndelete2.js" charset="utf-8"></script>
+    <script src="addndelete3.js" charset="utf-8"></script>
+    <script src="filter.js" charset="utf-8"></script>
+    <!-- <script src="tutoriel.js" charset="utf-8"></script>
+    <script src="tutoriel2.js" charset="utf-8"></script> -->
+
+  </body>
+</html>

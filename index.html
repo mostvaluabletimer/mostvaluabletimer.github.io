@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8">
+    <meta content='timer, most valuable timer, mvtimer, mvt, most valuable player, mvp, instância, ragnarok online, ro online, ragnarok' name='keywords' />
+    <meta content='Mage Bgt' name='author' />
+    <title lang="en">MVT • Most Valuable Timer</title>
+    <meta content='A sua ferramenta para farmar MVPs e Instâncias!' name='description' />
+    <meta content='https://mostvaluabletimer.com/img/mvt.png' property='og:image' />
+    <meta content='image/png' property='og:image:type' />
+    <meta content='350' property='og:image:width' />
+    <meta content='350' property='og:image:height' />
+    <link href="./css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/pretty-checkbox.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://magedbgt.github.io/fontawesome/css/all.css">
+    <meta name="msapplication-TileColor" content="#28414e">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#28414e">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body id="b">
+    <div id="circularMenu" class="circular-menu">
+        <button class="floating-btn" id="menuBtn"> <i class="fas fa-bars"></i> </button>
+        <menu class="items-wrapper">
+            <button class="menu-item " id="settingsBtn"> <i class="fas fa-cog"></i> </button>
+            <button class="menu-item " id="cortinaBtn"> <i class="fas fa-plus"></i> </button>
+            <button class="menu-item " id='eraserBtn'> <i class="fas fa-eraser"></i> </button>
+            <button class="menu-item " id="a2hsbtn"> <i class="fas fa-download"></i> </button>
+        </menu>
+    </div>
+    <header id="h">
+        <div class="container">
+            <div class="brand">
+                <h1 lang="en">MVTimer</h1>
+                <h3 lang="en">most valuable timer</h3></div>
+            <div id="servers">
+                <div class="dropdown">
+                    <button class="dropbtn"><img src="./img/brflag.png" alt="Brazil Flag"> </button>
+                    <div class="dropdown-content">
+                        <a href="/"><img src="./img/brflag.png" alt="Brazil Flag">bRO</a>
+                        <a href="/iRO.html"><img src="./img/usaflag.png" alt="Usa Flag">iRO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hTabs">
+                <ul>
+                    <li class="tab " id="mvpBoxTab" onclick="toggleActvTab(this,'mvpBox')"> MVP's</li>
+                    <li class="tab" id="instBoxTab" onclick="toggleActvTab(this,'instBox')"> Instâncias</li>
+                    <li class="tab" id="tutBoxTab" onclick="toggleActvTab(this,'tutBox')"> Tutorial</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <aside class="" id="cortina">
+        <div class="container">
+            <div class="searchSec">
+                <button class="searchTab whiteTxt greenBack" id="b0">MVP's</button>
+                <div class="panel" id="p0">
+                    <input type="text" id="mvpSearchBar" placeholder="Pesquisar" title="Procure um MVP">
+                    <div id="mvpSearch" class="searchBox"></div>
+                </div>
+                <button class="searchTab whiteTxt greenBack" id="b1">Instâncias</button>
+                <div class="panel" id="p1">
+                    <input type="text" id="instSearchBar" placeholder="Pesquisar" title="Procure uma instância">
+                    <div id="instSearch" class="searchBox"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="" id="settings">
+        <div class="container">
+            <div class="searchSec options">
+                <h2>Opções</h2>
+                <div class=" tabflex">
+                    <div class="">
+                        <h3>Tutorial</h3>
+                        <div class="optDiv">
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="checkT" value="" />
+                                <div class="state">
+                                    <label>Não iniciar com o tutorial</label>
+                                </div>
+                            </div>
+                            <select class="" name="" id="selectTab">
+                                <option value="mvpBox">MVPs</option>
+                                <option value="instBox">Instâncias</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h3>Notificações</h3>
+                        <div class="optDiv">
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="aliveMVP" value="" />
+                                <div class="state">
+                                    <label>Notificar MVP vivo*</label>
+                                </div>
+                            </div>
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="delayMVP" value="" />
+                                <div class="state">
+                                    <label>Notificar MVP em delay*</label>
+                                </div>
+                            </div>
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="fiveMinMVP" value="" />
+                                <div class="state">
+                                    <label>Notificar 5 minutos restantes*</label>
+                                </div>
+                            </div>
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="openDungeon" value="" />
+                                <div class="state">
+                                    <label>Notificar instância aberta*</label>
+                                </div>
+                            </div>
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="checkSound" value="" />
+                                <div class="state">
+                                    <label>Tocar som de MVP</label>
+                                </div>
+                            </div>
+                            <p class="redTxt">* É necessária a permissão para notificações</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <h3>Visual</h3>
+                        <div class="optDiv">
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="contrast" value="" />
+                                <div class="state">
+                                    <label>Alto contraste</label>
+                                </div>
+                            </div>
+                            <div class="custom pretty p-switch p-fill">
+                                <input type="checkbox" id="customColor" value="" />
+                                <div class="state">
+                                    <label>Cores customizadas (cards)</label>
+                                </div>
+                            </div>
+                            <div class="custom">
+                                <input type="color" id="tenMinColor"> <span> 10 minutos para o MVP entrar em delay </span></div>
+                            <div class="custom">
+                                <input type="color" id="fiveMinColor"> <span> 5 minutos para o MVP entrar em delay </span></div>
+                            <div class="custom">
+                                <input type="color" id="mvpInDelay"> <span> MVP em delay </span></div>
+                            <div class="custom">
+                                <input type="color" id="mvpBorn"> <span> MVP vivo </span></div>
+                            <div class="custom">
+                                <input type="color" id="tenMinInst"> <span> 10 minutos para a instância abrir </span></div>
+                            <div class="custom">
+                                <input type="color" id="fiveMinInst"> <span> 5 minutos para a instância abrir </span></div>
+                            <div class="custom">
+                                <input type="color" id="openInst"> <span> Instância aberta </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section>
+        <div class="container">
+            <div id="displaySec">
+                <div class="tabcontent" id="mvpBox"></div>
+                <div class="tabcontent" id="instBox"></div>
+                <div class="tabcontent" id="tutBox">
+                    <div class="flex">
+                        <h2>Adicionando um Card</h2>
+                        <p>Clique em <span class="tutfa fa-stack fa-2x"> <i class="greenTxt fas fa-circle fa-stack-2x"></i> <i class="whiteTxt menu fas fa-plus fa-stack-1x"></i> </span> para pesquisar o card de interesse (MVP e/ou instância).</p>
+                        <p> Adicione o horário e dia da morte ou do término da instância. <span class="redTxt"> Não se esqueça de converter o horário do túmulo do MVP para o seu fuso horário. O jogo tem como base o Horário de Brasília (GMT -3). </span></p>
+                        <p>Dependendo do browser, você deverá inserir o horário no formato 12h (am/pm) ou 24h, assim como a data em formato aaaa/mm/dd, se não houver um calendário.</p>
+                        <p> A escolha do servidor e a adição da descrição curta são opcionais, mas servem para melhor organização (servidor/personagem).</p>
+                        <p> As <span lang="en">cards</span> de MVP aparecerão sob a aba 'MVPs', assim como as de instância sob a aba 'Instâncias'.</p>
+                        <h2>Limpando a seção</h2>
+                        <p>Clique em <span class="tutfa fa-stack fa-2x"> <i class="pinkTxt fas fa-circle fa-stack-2x"></i> <i class="whiteTxt menu fas fa-eraser fa-stack-1x"></i> </span> para limpar a seção selecionada após confirmação.</p>
+                        <p class="redTxt">Atenção: este passo não poderá ser desfeito.</p>
+                        <h2>Cores</h2>
+                        <h3>MVP's</h3>
+                        <p class="customColor"> Fundo ao faltar 10 minutos.</p>
+                        <p class="customColor"> Fundo ao faltar 5 minutos.</p>
+                        <p class="customColor"> Fundo ao entrar em delay (máximo de 10 minutos; contabiliza a partir de 0).</p>
+                        <p class="customColor"> Fundo quando o MVP está vivo.</p>
+                        <h3>Instâncias</h3>
+                        <p class="customColor"> Fundo ao faltar 10 minutos.</p>
+                        <p class="customColor"> Fundo ao faltar 5 minutos.</p>
+                        <p class="customColor"> Fundo ao abrir.</p>
+                        <p>Clique em <span class="tutfa fa-stack fa-2x"> <i class="grayTxt fas fa-circle fa-stack-2x"></i> <i class="whiteTxt menu fas fa-cog fa-stack-1x"></i> </span> para configurar as cores conforme necessidade.</p>
+                        <h2>Notificações</h2>
+                        <p> Caso permita que o MVT lhe envie notificações, você poderá receber notificações sobre acontecimentos em relação às cards, como 10 e 5 minutos restantes, delay, MVP vivo ou instância aberta.</p>
+                        <p>Clique em <span class="tutfa fa-stack fa-2x"> <i class="grayTxt fas fa-circle fa-stack-2x"></i> <i class="whiteTxt menu fas fa-cog fa-stack-1x"></i> </span> para configurar quais notificações você deseja receber.</p>
+                        <p> Ao finalizar o <span lang="en">countdown</span>, você poderá ser notificado com o som de MVP, caso opte.</p>
+                        <h2>Dúvidas e sugestões</h2>
+                        <p>Caso haja alguma dúvida, sugestão, ou gostaria de reportar algo, mande-nos uma mensagem na <a lang="en" href="https://fb.me/mostvaluabletimer">fan page</a>! Você também pode acompanhar as atualizações por lá.</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="f">
+        <div class="container">
+            <div class="footer"> <small class="copy" lang="en">&copy; mostvaluabletimer 2019-2020 • Ragnarok Online é © 2002-2020 <a href="http://www.gravity.co.kr/">Gravity Co., Ltd.</a> & Lee Myoungjin.</small>
+                <br> <small class="donation" id="openDon">Apoie doando</small> • <small class="donation" id="openPP">Política de Privacidade</small>
+                <wbr>
+                <div class="fblike">
+                    <div class="fb-like" data-href="https://mostvaluabletimer.com/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="fb-root"></div>
+    <script defer src="main.min.js" charset="utf-8"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            let newWorker, refreshing;
+            navigator.serviceWorker.addEventListener('controllerchange', function() {
+                if (refreshing) return;
+                window.location.reload();
+                refreshing = true;
+            });
+            navigator.serviceWorker.register('sw.min.js').then(reg => {
+                reg.addEventListener('updatefound', () => {
+                    newWorker = reg.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        switch (newWorker.state) {
+                            case 'installed':
+                                if (navigator.serviceWorker.controller) {
+                                    alert('Uma nova versão foi encontrada e a aplicação será atualizada');
+                                }
+                                break;
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+    <script defer src="prompt.min.js" charset="utf-8"></script>
+    <script defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=531364940686959&autoLogAppEvents=1"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-154776233-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-154776233-1');
+    </script>
+    <audio id="mvpJingle">
+        <source src="audio/mvp.mp3"></source>
+        <source src="audio/mvp.ogg"></source> Your browser doesn't support audio. </audio>
+</body>
+
+</html>
